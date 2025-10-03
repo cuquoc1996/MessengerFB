@@ -1,0 +1,6 @@
+framework module Pods_MessengerFB {
+  umbrella header "Pods-MessengerFB-umbrella.h"
+
+  export *
+  module * { export * }
+}

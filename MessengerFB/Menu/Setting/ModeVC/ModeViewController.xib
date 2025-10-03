@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ModeViewController" customModule="MessengerFB" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewMode" destination="Itg-Ha-oD5" id="2kK-Ib-a8m"/>
+                <outletCollection property="optionButtons" destination="Bng-mq-s63" collectionClass="NSMutableArray" id="I5G-gB-D6n"/>
+                <outletCollection property="optionButtons" destination="bKq-zZ-3Yk" collectionClass="NSMutableArray" id="Dzh-UY-uKl"/>
+                <outletCollection property="optionButtons" destination="vj5-bz-Bfu" collectionClass="NSMutableArray" id="8Za-FF-0Jd"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Itg-Ha-oD5">
+                    <rect key="frame" x="20" y="59" width="363" height="150"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bng-mq-s63">
+                            <rect key="frame" x="0.0" y="0.0" width="363" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="Njd-T7-obG"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain"/>
+                        </button>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKq-zZ-3Yk">
+                            <rect key="frame" x="0.0" y="50" width="363" height="50"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain"/>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vj5-bz-Bfu">
+                            <rect key="frame" x="0.0" y="100" width="363" height="50"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Hệ thống">
+                                <fontDescription key="titleFontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="15"/>
+                                <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nếu bạn chọn hệ thống, Messenger sẽ tự động điều chỉnh giao diện theo phần cài đặt hệ thống trên thiết bị." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yD5-rA-H24">
+                    <rect key="frame" x="30" y="214" width="333" height="29"/>
+                    <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="yD5-rA-H24" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9FM-YE-XyL"/>
+                <constraint firstItem="Itg-Ha-oD5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Q2p-Y5-D08"/>
+                <constraint firstItem="yD5-rA-H24" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="XIe-td-lQs"/>
+                <constraint firstItem="yD5-rA-H24" firstAttribute="top" secondItem="Itg-Ha-oD5" secondAttribute="bottom" constant="5" id="agh-RD-dpy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Itg-Ha-oD5" secondAttribute="trailing" constant="10" id="qqg-ex-L7Q"/>
+                <constraint firstItem="Itg-Ha-oD5" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="slB-Sf-Crf"/>
+                <constraint firstAttribute="trailing" secondItem="yD5-rA-H24" secondAttribute="trailing" constant="30" id="viL-z8-gTa"/>
+            </constraints>
+            <point key="canvasLocation" x="125.95419847328243" y="-1.4084507042253522"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
