@@ -28,7 +28,7 @@ class LanguagePickerViewController: UIViewController {
                                      target: self, action: #selector(cancelTapped))
         let flex = UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
                                    target: nil, action: nil)
-        let done = UIBarButtonItem(title: "Xong", style: .done,
+        let done = UIBarButtonItem(title: "Done", style: .done,
                                    target: self, action: #selector(doneTapped))
         toolbar.setItems([cancel, flex, done], animated: false)
         
