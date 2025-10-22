@@ -33,6 +33,10 @@
 		52407DCE2DFD66EA00558231 /* SettingCenterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52407DCC2DFD66E900558231 /* SettingCenterTableViewCell.xib */; };
 		52490F152E33365400653041 /* ModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52490F132E33365400653041 /* ModeViewController.swift */; };
 		52490F162E33365400653041 /* ModeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52490F142E33365400653041 /* ModeViewController.xib */; };
+		525AD5972E94C50B00B061A7 /* HalfWidthPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525AD5952E94C50B00B061A7 /* HalfWidthPresentationController.swift */; };
+		525AD59A2E94CBE000B061A7 /* HalfWidthTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525AD5992E94CBE000B061A7 /* HalfWidthTransitioningDelegate.swift */; };
+		525AD59C2E94CDAC00B061A7 /* HalfModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525AD59B2E94CDAC00B061A7 /* HalfModalViewController.swift */; };
+		525AD59E2E95128B00B061A7 /* HalfWidthAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525AD59D2E95128B00B061A7 /* HalfWidthAnimator.swift */; };
 		5262447E2DE81BD800A43A53 /* GoogleService-Info (1).plist in Resources */ = {isa = PBXBuildFile; fileRef = 5262447D2DE81BD800A43A53 /* GoogleService-Info (1).plist */; };
 		527639EA2E80F60100425421 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527639E82E80F60100425421 /* DatePickerViewController.swift */; };
 		527639EF2E8131EB00425421 /* LanguagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527639ED2E8131EB00425421 /* LanguagePickerViewController.swift */; };
@@ -105,6 +109,10 @@
 		52407DCC2DFD66E900558231 /* SettingCenterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingCenterTableViewCell.xib; sourceTree = "<group>"; };
 		52490F132E33365400653041 /* ModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeViewController.swift; sourceTree = "<group>"; };
 		52490F142E33365400653041 /* ModeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModeViewController.xib; sourceTree = "<group>"; };
+		525AD5952E94C50B00B061A7 /* HalfWidthPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfWidthPresentationController.swift; sourceTree = "<group>"; };
+		525AD5992E94CBE000B061A7 /* HalfWidthTransitioningDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfWidthTransitioningDelegate.swift; sourceTree = "<group>"; };
+		525AD59B2E94CDAC00B061A7 /* HalfModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfModalViewController.swift; sourceTree = "<group>"; };
+		525AD59D2E95128B00B061A7 /* HalfWidthAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfWidthAnimator.swift; sourceTree = "<group>"; };
 		5262447D2DE81BD800A43A53 /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (1).plist"; sourceTree = "<group>"; };
 		527639E82E80F60100425421 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		527639ED2E8131EB00425421 /* LanguagePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagePickerViewController.swift; sourceTree = "<group>"; };
@@ -333,6 +341,17 @@
 			path = ModeVC;
 			sourceTree = "<group>";
 		};
+		525AD5922E94C47600B061A7 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				525AD5952E94C50B00B061A7 /* HalfWidthPresentationController.swift */,
+				525AD5992E94CBE000B061A7 /* HalfWidthTransitioningDelegate.swift */,
+				525AD59D2E95128B00B061A7 /* HalfWidthAnimator.swift */,
+				525AD59B2E94CDAC00B061A7 /* HalfModalViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		527639E72E80F5AF00425421 /* CustomVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -424,9 +443,10 @@
 			isa = PBXGroup;
 			children = (
 				52B47D712DD450B7000A37D1 /* Login */,
-				520D825C2DD42F0C0058FEAD /* Menu */,
-				520D82572DD42EE20058FEAD /* Friends */,
 				520D82522DD42EA10058FEAD /* Mesenger */,
+				520D82572DD42EE20058FEAD /* Friends */,
+				520D825C2DD42F0C0058FEAD /* Menu */,
+				525AD5922E94C47600B061A7 /* Profile */,
 				520D82512DD42DFA0058FEAD /* Supporting */,
 			);
 			path = MessengerFB;
@@ -634,17 +654,21 @@
 			files = (
 				527639EA2E80F60100425421 /* DatePickerViewController.swift in Sources */,
 				52B47D6F2DD450A2000A37D1 /* LoginViewController.swift in Sources */,
+				525AD59E2E95128B00B061A7 /* HalfWidthAnimator.swift in Sources */,
 				528FB62D2E3B66FE002D2441 /* ActiveStatusViewController.swift in Sources */,
 				520D82552DD42ED80058FEAD /* MessengerViewController.swift in Sources */,
 				52407DCD2DFD66E900558231 /* SettingCenterTableViewCell.swift in Sources */,
 				522912CC2DF2E13A00608C83 /* MenuTableViewCell.swift in Sources */,
 				528EE8732E82479000823999 /* DataSource.swift in Sources */,
+				525AD59A2E94CBE000B061A7 /* HalfWidthTransitioningDelegate.swift in Sources */,
 				52407DC82DFD4F9000558231 /* SettingViewController.swift in Sources */,
 				520D825F2DD42F200058FEAD /* MenuViewController.swift in Sources */,
 				5278601D2DD5EA7400E7D6ED /* UIHelper.swift in Sources */,
 				528279282DD4E545004F6D8C /* MainTabBarController.swift in Sources */,
+				525AD5972E94C50B00B061A7 /* HalfWidthPresentationController.swift in Sources */,
 				5237F06F2E137A5E00272122 /* MarketplaceViewController.swift in Sources */,
 				52D0EDC92DD24D460088E05C /* AppDelegate.swift in Sources */,
+				525AD59C2E94CDAC00B061A7 /* HalfModalViewController.swift in Sources */,
 				528EE87A2E825C6500823999 /* LocationPickerViewController.swift in Sources */,
 				5205A8572E8A49EA00CAAA9C /* SearchResultsTableViewController.swift in Sources */,
 				5227085B2E0472B7008AFED9 /* StatusFriendTableViewCell.swift in Sources */,

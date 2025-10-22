@@ -39,6 +39,7 @@ class LoginViewController: UIViewController {
         //        passwordTextField.isSecureTextEntry = true
         //        passwordTextField.addTarget(self, action: #selector(passwordTypingEffect(_:)), for: .editingChanged)
     }
+    
     //    @objc func passwordTypingEffect(_ textField: UITextField) {
     //        guard let currentFont = passwordTextField.font else { return }
     //

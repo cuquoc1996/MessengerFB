@@ -6,15 +6,15 @@
 //
 
 import UIKit
-class MainTabBarController: UITabBarController {
+class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
+    private let halfDelegate = HalfWidthTransitioningDelegate()
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTabs()
+        delegate = self
     }
-    
     //setup TabBar
     func setupTabs() {
-        
         let messageVC = MessengerViewController()
         messageVC.tabBarItem.title = "Massage"
         messageVC.navigationItem.title = ""
@@ -33,11 +33,32 @@ class MainTabBarController: UITabBarController {
         menuVC.tabBarItem.title = "Menu"
         menuVC.navigationItem.title = ""
         menuVC.tabBarItem.image = UIImage(named: "icons8-menu-50")
+        
+        let panelVC = UIViewController()
+        panelVC.tabBarItem = UITabBarItem(title: "Panel", image: UIImage(systemName: "sidebar.right"), tag: 3)
+        
         viewControllers = [
             UINavigationController(rootViewController: messageVC),
-            UINavigationController(rootViewController: friendVC),UINavigationController(rootViewController: menuVC)
+            UINavigationController(rootViewController: friendVC),
+            UINavigationController(rootViewController: menuVC),
+            UINavigationController(rootViewController: panelVC)
         ]
     }
+    
+    // Ngăn TabBar chuyển tab, chỉ show panel
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        if viewController.tabBarItem.tag == 3 {
+            presentHalfWidthPanel()
+            return false // Không chuyển tab thật
+        }
+        return true
+    }
+    
+    private func presentHalfWidthPanel() {
+        let halfVC = HalfModalViewController()
+        let nav = UINavigationController(rootViewController: halfVC) // 👈 bọc trong Navigation
+        nav.modalPresentationStyle = .custom
+        nav.transitioningDelegate = halfDelegate
+        present(nav, animated: true)
+    }
 }
-
-

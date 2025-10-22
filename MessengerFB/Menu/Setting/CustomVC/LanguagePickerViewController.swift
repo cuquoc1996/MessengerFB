@@ -24,7 +24,7 @@ class LanguagePickerViewController: UIViewController {
     private func setupToolbar() {
         let toolbar = UIToolbar()
         toolbar.translatesAutoresizingMaskIntoConstraints = false
-        let cancel = UIBarButtonItem(title: "Hủy", style: .plain,
+        let cancel = UIBarButtonItem(title: "Cancel", style: .plain,
                                      target: self, action: #selector(cancelTapped))
         let flex = UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
                                    target: nil, action: nil)

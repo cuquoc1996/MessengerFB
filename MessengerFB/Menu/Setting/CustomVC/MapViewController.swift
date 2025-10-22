@@ -103,7 +103,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                                         span: MKCoordinateSpan(latitudeDelta: 0.01,
                                                                longitudeDelta: 0.01))
         mapView.setRegion(region, animated: true)
-        
         locationManager.stopUpdatingLocation()
     }
     
